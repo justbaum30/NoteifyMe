@@ -22,6 +22,10 @@
 		58D7BFEA1A3698B000F15DF4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFE91A3698B000F15DF4 /* Interface.storyboard */; };
 		58D7BFEC1A3698B000F15DF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFEB1A3698B000F15DF4 /* Images.xcassets */; };
 		58D7BFEF1A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 58D7BFD01A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		58D7BFFE1A369E3700F15DF4 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D7BFFD1A369E3700F15DF4 /* NotificationCenter.framework */; };
+		58D7C0031A369E3700F15DF4 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7C0021A369E3700F15DF4 /* TodayViewController.swift */; };
+		58D7C0051A369E3700F15DF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D7C0041A369E3700F15DF4 /* MainInterface.storyboard */; };
+		58D7C0081A369E3700F15DF4 /* NoteifyMeToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 58D7BFFC1A369E3700F15DF4 /* NoteifyMeToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,13 @@
 			remoteGlobalIDString = 58D7BFCF1A3698B000F15DF4;
 			remoteInfo = "NoteifyMe WatchKit Extension";
 		};
+		58D7C0061A369E3700F15DF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58D7BF921A3697B700F15DF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58D7BFFB1A369E3700F15DF4;
+			remoteInfo = NoteifyMeToday;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +67,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				58D7BFEF1A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex in Embed App Extensions */,
+				58D7C0081A369E3700F15DF4 /* NoteifyMeToday.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +97,11 @@
 		58D7BFE81A3698B000F15DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58D7BFE91A3698B000F15DF4 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		58D7BFEB1A3698B000F15DF4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		58D7BFFC1A369E3700F15DF4 /* NoteifyMeToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NoteifyMeToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D7BFFD1A369E3700F15DF4 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		58D7C0011A369E3700F15DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D7C0021A369E3700F15DF4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		58D7C0041A369E3700F15DF4 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +127,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58D7BFF91A369E3700F15DF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D7BFFE1A369E3700F15DF4 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,9 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				58D7BF9C1A3697B700F15DF4 /* NoteifyMe */,
+				58D7BFF71A369C9600F15DF4 /* NoteifyMe Watch App */,
+				58D7BFFF1A369E3700F15DF4 /* NoteifyMeToday */,
 				58D7BFB21A3697B700F15DF4 /* NoteifyMeTests */,
-				58D7BFD41A3698B000F15DF4 /* NoteifyMe WatchKit Extension */,
-				58D7BFE61A3698B000F15DF4 /* NoteifyMe Watch App */,
 				58D7BFD11A3698B000F15DF4 /* Frameworks */,
 				58D7BF9B1A3697B700F15DF4 /* Products */,
 			);
@@ -132,6 +157,7 @@
 				58D7BFAF1A3697B700F15DF4 /* NoteifyMeTests.xctest */,
 				58D7BFD01A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex */,
 				58D7BFE21A3698B000F15DF4 /* NoteifyMe Watch App.app */,
+				58D7BFFC1A369E3700F15DF4 /* NoteifyMeToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,11 +204,12 @@
 			isa = PBXGroup;
 			children = (
 				58D7BFD21A3698B000F15DF4 /* WatchKit.framework */,
+				58D7BFFD1A369E3700F15DF4 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		58D7BFD41A3698B000F15DF4 /* NoteifyMe WatchKit Extension */ = {
+		58D7BFD41A3698B000F15DF4 /* Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
 				58D7BFD81A3698B000F15DF4 /* InterfaceController.swift */,
@@ -191,6 +218,7 @@
 				58D7BFDE1A3698B000F15DF4 /* Images.xcassets */,
 				58D7BFD51A3698B000F15DF4 /* Supporting Files */,
 			);
+			name = "Watch Extension";
 			path = "NoteifyMe WatchKit Extension";
 			sourceTree = "<group>";
 		};
@@ -203,13 +231,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		58D7BFE61A3698B000F15DF4 /* NoteifyMe Watch App */ = {
+		58D7BFE61A3698B000F15DF4 /* Watch App */ = {
 			isa = PBXGroup;
 			children = (
 				58D7BFE91A3698B000F15DF4 /* Interface.storyboard */,
 				58D7BFEB1A3698B000F15DF4 /* Images.xcassets */,
 				58D7BFE71A3698B000F15DF4 /* Supporting Files */,
 			);
+			name = "Watch App";
 			path = "NoteifyMe Watch App";
 			sourceTree = "<group>";
 		};
@@ -217,6 +246,33 @@
 			isa = PBXGroup;
 			children = (
 				58D7BFE81A3698B000F15DF4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58D7BFF71A369C9600F15DF4 /* NoteifyMe Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				58D7BFE61A3698B000F15DF4 /* Watch App */,
+				58D7BFD41A3698B000F15DF4 /* Watch Extension */,
+			);
+			name = "NoteifyMe Watch App";
+			sourceTree = "<group>";
+		};
+		58D7BFFF1A369E3700F15DF4 /* NoteifyMeToday */ = {
+			isa = PBXGroup;
+			children = (
+				58D7C0021A369E3700F15DF4 /* TodayViewController.swift */,
+				58D7C0041A369E3700F15DF4 /* MainInterface.storyboard */,
+				58D7C0001A369E3700F15DF4 /* Supporting Files */,
+			);
+			path = NoteifyMeToday;
+			sourceTree = "<group>";
+		};
+		58D7C0001A369E3700F15DF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58D7C0011A369E3700F15DF4 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -237,6 +293,7 @@
 			);
 			dependencies = (
 				58D7BFEE1A3698B000F15DF4 /* PBXTargetDependency */,
+				58D7C0071A369E3700F15DF4 /* PBXTargetDependency */,
 			);
 			name = NoteifyMe;
 			productName = NoteifyMe;
@@ -294,6 +351,23 @@
 			productReference = 58D7BFE21A3698B000F15DF4 /* NoteifyMe Watch App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
+		58D7BFFB1A369E3700F15DF4 /* NoteifyMeToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58D7C0091A369E3700F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMeToday" */;
+			buildPhases = (
+				58D7BFF81A369E3700F15DF4 /* Sources */,
+				58D7BFF91A369E3700F15DF4 /* Frameworks */,
+				58D7BFFA1A369E3700F15DF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoteifyMeToday;
+			productName = NoteifyMeToday;
+			productReference = 58D7BFFC1A369E3700F15DF4 /* NoteifyMeToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -316,6 +390,9 @@
 					58D7BFE11A3698B000F15DF4 = {
 						CreatedOnToolsVersion = 6.2;
 					};
+					58D7BFFB1A369E3700F15DF4 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 				};
 			};
 			buildConfigurationList = 58D7BF951A3697B700F15DF4 /* Build configuration list for PBXProject "NoteifyMe" */;
@@ -335,6 +412,7 @@
 				58D7BFAE1A3697B700F15DF4 /* NoteifyMeTests */,
 				58D7BFCF1A3698B000F15DF4 /* NoteifyMe WatchKit Extension */,
 				58D7BFE11A3698B000F15DF4 /* NoteifyMe Watch App */,
+				58D7BFFB1A369E3700F15DF4 /* NoteifyMeToday */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +453,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58D7BFFA1A369E3700F15DF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D7C0051A369E3700F15DF4 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -405,6 +491,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58D7BFF81A369E3700F15DF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D7C0031A369E3700F15DF4 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -422,6 +516,11 @@
 			isa = PBXTargetDependency;
 			target = 58D7BFCF1A3698B000F15DF4 /* NoteifyMe WatchKit Extension */;
 			targetProxy = 58D7BFED1A3698B000F15DF4 /* PBXContainerItemProxy */;
+		};
+		58D7C0071A369E3700F15DF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58D7BFFB1A369E3700F15DF4 /* NoteifyMeToday */;
+			targetProxy = 58D7C0061A369E3700F15DF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -636,6 +735,30 @@
 			};
 			name = Release;
 		};
+		58D7C00A1A369E3700F15DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NoteifyMeToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58D7C00B1A369E3700F15DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NoteifyMeToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -677,6 +800,14 @@
 			buildConfigurations = (
 				58D7BFF41A3698B000F15DF4 /* Debug */,
 				58D7BFF51A3698B000F15DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		58D7C0091A369E3700F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMeToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D7C00A1A369E3700F15DF4 /* Debug */,
+				58D7C00B1A369E3700F15DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -13,6 +13,15 @@
 		58D7BFA71A3697B700F15DF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFA61A3697B700F15DF4 /* Images.xcassets */; };
 		58D7BFAA1A3697B700F15DF4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFA81A3697B700F15DF4 /* LaunchScreen.xib */; };
 		58D7BFB61A3697B700F15DF4 /* NoteifyMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7BFB51A3697B700F15DF4 /* NoteifyMeTests.swift */; };
+		58D7BFD31A3698B000F15DF4 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D7BFD21A3698B000F15DF4 /* WatchKit.framework */; };
+		58D7BFD91A3698B000F15DF4 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7BFD81A3698B000F15DF4 /* InterfaceController.swift */; };
+		58D7BFDB1A3698B000F15DF4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7BFDA1A3698B000F15DF4 /* NotificationController.swift */; };
+		58D7BFDD1A3698B000F15DF4 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7BFDC1A3698B000F15DF4 /* GlanceController.swift */; };
+		58D7BFDF1A3698B000F15DF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFDE1A3698B000F15DF4 /* Images.xcassets */; };
+		58D7BFE31A3698B000F15DF4 /* NoteifyMe Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFE21A3698B000F15DF4 /* NoteifyMe Watch App.app */; };
+		58D7BFEA1A3698B000F15DF4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFE91A3698B000F15DF4 /* Interface.storyboard */; };
+		58D7BFEC1A3698B000F15DF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFEB1A3698B000F15DF4 /* Images.xcassets */; };
+		58D7BFEF1A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 58D7BFD01A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +32,35 @@
 			remoteGlobalIDString = 58D7BF991A3697B700F15DF4;
 			remoteInfo = NoteifyMe;
 		};
+		58D7BFE41A3698B000F15DF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58D7BF921A3697B700F15DF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58D7BFE11A3698B000F15DF4;
+			remoteInfo = "NoteifyMe Watch App";
+		};
+		58D7BFED1A3698B000F15DF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58D7BF921A3697B700F15DF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58D7BFCF1A3698B000F15DF4;
+			remoteInfo = "NoteifyMe WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58D7BFF61A3698B000F15DF4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				58D7BFEF1A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		58D7BF9A1A3697B700F15DF4 /* NoteifyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteifyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +73,18 @@
 		58D7BFAF1A3697B700F15DF4 /* NoteifyMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoteifyMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D7BFB41A3697B700F15DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58D7BFB51A3697B700F15DF4 /* NoteifyMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteifyMeTests.swift; sourceTree = "<group>"; };
+		58D7BFD01A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NoteifyMe WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D7BFD21A3698B000F15DF4 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		58D7BFD61A3698B000F15DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D7BFD71A3698B000F15DF4 /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
+		58D7BFD81A3698B000F15DF4 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		58D7BFDA1A3698B000F15DF4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		58D7BFDC1A3698B000F15DF4 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		58D7BFDE1A3698B000F15DF4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		58D7BFE21A3698B000F15DF4 /* NoteifyMe Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoteifyMe Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D7BFE81A3698B000F15DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D7BFE91A3698B000F15DF4 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		58D7BFEB1A3698B000F15DF4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +102,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58D7BFCD1A3698B000F15DF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D7BFD31A3698B000F15DF4 /* WatchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +118,9 @@
 			children = (
 				58D7BF9C1A3697B700F15DF4 /* NoteifyMe */,
 				58D7BFB21A3697B700F15DF4 /* NoteifyMeTests */,
+				58D7BFD41A3698B000F15DF4 /* NoteifyMe WatchKit Extension */,
+				58D7BFE61A3698B000F15DF4 /* NoteifyMe Watch App */,
+				58D7BFD11A3698B000F15DF4 /* Frameworks */,
 				58D7BF9B1A3697B700F15DF4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +130,8 @@
 			children = (
 				58D7BF9A1A3697B700F15DF4 /* NoteifyMe.app */,
 				58D7BFAF1A3697B700F15DF4 /* NoteifyMeTests.xctest */,
+				58D7BFD01A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex */,
+				58D7BFE21A3698B000F15DF4 /* NoteifyMe Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +174,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		58D7BFD11A3698B000F15DF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58D7BFD21A3698B000F15DF4 /* WatchKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58D7BFD41A3698B000F15DF4 /* NoteifyMe WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				58D7BFD81A3698B000F15DF4 /* InterfaceController.swift */,
+				58D7BFDA1A3698B000F15DF4 /* NotificationController.swift */,
+				58D7BFDC1A3698B000F15DF4 /* GlanceController.swift */,
+				58D7BFDE1A3698B000F15DF4 /* Images.xcassets */,
+				58D7BFD51A3698B000F15DF4 /* Supporting Files */,
+			);
+			path = "NoteifyMe WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		58D7BFD51A3698B000F15DF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58D7BFD61A3698B000F15DF4 /* Info.plist */,
+				58D7BFD71A3698B000F15DF4 /* PushNotificationPayload.json */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58D7BFE61A3698B000F15DF4 /* NoteifyMe Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				58D7BFE91A3698B000F15DF4 /* Interface.storyboard */,
+				58D7BFEB1A3698B000F15DF4 /* Images.xcassets */,
+				58D7BFE71A3698B000F15DF4 /* Supporting Files */,
+			);
+			path = "NoteifyMe Watch App";
+			sourceTree = "<group>";
+		};
+		58D7BFE71A3698B000F15DF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58D7BFE81A3698B000F15DF4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +231,12 @@
 				58D7BF961A3697B700F15DF4 /* Sources */,
 				58D7BF971A3697B700F15DF4 /* Frameworks */,
 				58D7BF981A3697B700F15DF4 /* Resources */,
+				58D7BFF61A3698B000F15DF4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				58D7BFEE1A3698B000F15DF4 /* PBXTargetDependency */,
 			);
 			name = NoteifyMe;
 			productName = NoteifyMe;
@@ -150,6 +261,39 @@
 			productReference = 58D7BFAF1A3697B700F15DF4 /* NoteifyMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		58D7BFCF1A3698B000F15DF4 /* NoteifyMe WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58D7BFF31A3698B000F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMe WatchKit Extension" */;
+			buildPhases = (
+				58D7BFCC1A3698B000F15DF4 /* Sources */,
+				58D7BFCD1A3698B000F15DF4 /* Frameworks */,
+				58D7BFCE1A3698B000F15DF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58D7BFE51A3698B000F15DF4 /* PBXTargetDependency */,
+			);
+			name = "NoteifyMe WatchKit Extension";
+			productName = "NoteifyMe WatchKit Extension";
+			productReference = 58D7BFD01A3698B000F15DF4 /* NoteifyMe WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		58D7BFE11A3698B000F15DF4 /* NoteifyMe Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58D7BFF01A3698B000F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMe Watch App" */;
+			buildPhases = (
+				58D7BFE01A3698B000F15DF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NoteifyMe Watch App";
+			productName = "NoteifyMe Watch App";
+			productReference = 58D7BFE21A3698B000F15DF4 /* NoteifyMe Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +309,12 @@
 					58D7BFAE1A3697B700F15DF4 = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 58D7BF991A3697B700F15DF4;
+					};
+					58D7BFCF1A3698B000F15DF4 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					58D7BFE11A3698B000F15DF4 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -183,6 +333,8 @@
 			targets = (
 				58D7BF991A3697B700F15DF4 /* NoteifyMe */,
 				58D7BFAE1A3697B700F15DF4 /* NoteifyMeTests */,
+				58D7BFCF1A3698B000F15DF4 /* NoteifyMe WatchKit Extension */,
+				58D7BFE11A3698B000F15DF4 /* NoteifyMe Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +354,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D7BFCE1A3698B000F15DF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D7BFE31A3698B000F15DF4 /* NoteifyMe Watch App.app in Resources */,
+				58D7BFDF1A3698B000F15DF4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D7BFE01A3698B000F15DF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D7BFEA1A3698B000F15DF4 /* Interface.storyboard in Resources */,
+				58D7BFEC1A3698B000F15DF4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +395,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58D7BFCC1A3698B000F15DF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D7BFDB1A3698B000F15DF4 /* NotificationController.swift in Sources */,
+				58D7BFD91A3698B000F15DF4 /* InterfaceController.swift in Sources */,
+				58D7BFDD1A3698B000F15DF4 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +412,16 @@
 			isa = PBXTargetDependency;
 			target = 58D7BF991A3697B700F15DF4 /* NoteifyMe */;
 			targetProxy = 58D7BFB01A3697B700F15DF4 /* PBXContainerItemProxy */;
+		};
+		58D7BFE51A3698B000F15DF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58D7BFE11A3698B000F15DF4 /* NoteifyMe Watch App */;
+			targetProxy = 58D7BFE41A3698B000F15DF4 /* PBXContainerItemProxy */;
+		};
+		58D7BFEE1A3698B000F15DF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58D7BFCF1A3698B000F15DF4 /* NoteifyMe WatchKit Extension */;
+			targetProxy = 58D7BFED1A3698B000F15DF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -338,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = NoteifyMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = NoteifyMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,6 +580,62 @@
 			};
 			name = Release;
 		};
+		58D7BFF11A3698B000F15DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = NoteifyMe_WatchKit_Extension;
+				INFOPLIST_FILE = "NoteifyMe Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		58D7BFF21A3698B000F15DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = NoteifyMe_WatchKit_Extension;
+				INFOPLIST_FILE = "NoteifyMe Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		58D7BFF41A3698B000F15DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NoteifyMe WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58D7BFF51A3698B000F15DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NoteifyMe WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +661,22 @@
 			buildConfigurations = (
 				58D7BFBD1A3697B700F15DF4 /* Debug */,
 				58D7BFBE1A3697B700F15DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		58D7BFF01A3698B000F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMe Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D7BFF11A3698B000F15DF4 /* Debug */,
+				58D7BFF21A3698B000F15DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		58D7BFF31A3698B000F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMe WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D7BFF41A3698B000F15DF4 /* Debug */,
+				58D7BFF51A3698B000F15DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

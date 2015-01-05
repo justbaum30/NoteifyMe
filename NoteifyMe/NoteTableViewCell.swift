@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import NoteifyMeCommons
 
 class NoteTableViewCell: UITableViewCell {
 
     // MARK: Outlets
     
-    @IBOutlet weak var categoryIndicator: UIView!
-    @IBOutlet weak var noteTitle: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var colorIndicator: UIView!
     
     // MARK: Initialization
     
@@ -23,7 +24,10 @@ class NoteTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    //func styleCellWith
+    func styleCellWithNote(note: Note) {
+        self.titleLabel.text = note.title
+        self.colorIndicator.backgroundColor = note.color.colorRef
+    }
     
     // MARK: Class functions
     

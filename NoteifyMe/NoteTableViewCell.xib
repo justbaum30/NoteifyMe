@@ -44,9 +44,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="categoryIndicator" destination="IEd-ky-0Fd" id="c72-Fh-A5A"/>
+                <outlet property="colorIndicator" destination="IEd-ky-0Fd" id="Mo3-JQ-L3z"/>
                 <outlet property="dateLabel" destination="Mbp-mF-bDM" id="Zld-Y0-4K4"/>
-                <outlet property="noteTitle" destination="4XX-tJ-OeD" id="V6T-QD-VP5"/>
+                <outlet property="titleLabel" destination="4XX-tJ-OeD" id="OYe-Tu-Fyq"/>
             </connections>
             <point key="canvasLocation" x="240.5" y="147"/>
         </tableViewCell>

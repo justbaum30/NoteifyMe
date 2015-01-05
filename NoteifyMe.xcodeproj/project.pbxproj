@@ -14,6 +14,7 @@
 		580BDB931A5A42DA00BF6807 /* NoteifyMeCommonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BDB921A5A42DA00BF6807 /* NoteifyMeCommonsTests.swift */; };
 		580BDB961A5A42DA00BF6807 /* NoteifyMeCommons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 580BDB7F1A5A42DA00BF6807 /* NoteifyMeCommons.framework */; };
 		580BDB971A5A42DA00BF6807 /* NoteifyMeCommons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 580BDB7F1A5A42DA00BF6807 /* NoteifyMeCommons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		580BDBA11A5A447200BF6807 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BDBA01A5A447200BF6807 /* Note.swift */; };
 		58BACE841A36AE5A009222BF /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BACE831A36AE5A009222BF /* NotesViewController.swift */; };
 		58D7BFA01A3697B700F15DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7BF9F1A3697B700F15DF4 /* AppDelegate.swift */; };
 		58D7BFA51A3697B700F15DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFA31A3697B700F15DF4 /* Main.storyboard */; };
@@ -122,6 +123,7 @@
 		580BDB891A5A42DA00BF6807 /* NoteifyMeCommonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoteifyMeCommonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		580BDB911A5A42DA00BF6807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580BDB921A5A42DA00BF6807 /* NoteifyMeCommonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteifyMeCommonsTests.swift; sourceTree = "<group>"; };
+		580BDBA01A5A447200BF6807 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		58BACE831A36AE5A009222BF /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		58D7BF9A1A3697B700F15DF4 /* NoteifyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteifyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D7BF9E1A3697B700F15DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -204,6 +206,8 @@
 		580BDB801A5A42DA00BF6807 /* NoteifyMeCommons */ = {
 			isa = PBXGroup;
 			children = (
+				580BDB9F1A5A444D00BF6807 /* Business Service */,
+				580BDB9E1A5A443900BF6807 /* Models */,
 				580BDB831A5A42DA00BF6807 /* NoteifyMeCommons.h */,
 				580BDB811A5A42DA00BF6807 /* Supporting Files */,
 				580BDB8F1A5A42DA00BF6807 /* Tests */,
@@ -235,6 +239,21 @@
 				580BDB911A5A42DA00BF6807 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		580BDB9E1A5A443900BF6807 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				580BDBA01A5A447200BF6807 /* Note.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		580BDB9F1A5A444D00BF6807 /* Business Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Business Service";
 			sourceTree = "<group>";
 		};
 		58BACE851A36BE4E009222BF /* View Controllers */ = {
@@ -663,6 +682,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580BDBA11A5A447200BF6807 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,6 +794,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -788,6 +809,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -797,6 +819,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

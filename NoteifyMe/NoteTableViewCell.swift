@@ -23,7 +23,7 @@ class NoteTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func styleCellWith
+    //func styleCellWith
     
     // MARK: Class functions
     

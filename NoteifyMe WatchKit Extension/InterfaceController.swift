@@ -12,9 +12,9 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-    override init(context: AnyObject?) {
+    override init() {
         // Initialize variables here.
-        super.init(context: context)
+        super.init()
         
         // Configure interface objects here.
         NSLog("%@ init", self)

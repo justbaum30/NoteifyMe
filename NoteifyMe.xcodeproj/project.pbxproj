@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580BDB4B1A5A31FF00BF6807 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BDB491A5A31FF00BF6807 /* NoteTableViewCell.swift */; };
+		580BDB4C1A5A31FF00BF6807 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 580BDB4A1A5A31FF00BF6807 /* NoteTableViewCell.xib */; };
+		58BACE841A36AE5A009222BF /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BACE831A36AE5A009222BF /* NotesViewController.swift */; };
 		58D7BFA01A3697B700F15DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7BF9F1A3697B700F15DF4 /* AppDelegate.swift */; };
-		58D7BFA21A3697B700F15DF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7BFA11A3697B700F15DF4 /* ViewController.swift */; };
 		58D7BFA51A3697B700F15DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFA31A3697B700F15DF4 /* Main.storyboard */; };
 		58D7BFA71A3697B700F15DF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFA61A3697B700F15DF4 /* Images.xcassets */; };
 		58D7BFAA1A3697B700F15DF4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFA81A3697B700F15DF4 /* LaunchScreen.xib */; };
@@ -60,6 +62,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		580BDB761A5A3F4A00BF6807 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		58D7BFF61A3698B000F15DF4 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,10 +87,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		580BDB491A5A31FF00BF6807 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		580BDB4A1A5A31FF00BF6807 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
+		58BACE831A36AE5A009222BF /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		58D7BF9A1A3697B700F15DF4 /* NoteifyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteifyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D7BF9E1A3697B700F15DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58D7BF9F1A3697B700F15DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58D7BFA11A3697B700F15DF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58D7BFA41A3697B700F15DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58D7BFA61A3697B700F15DF4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		58D7BFA91A3697B700F15DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -138,6 +152,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58BACE851A36BE4E009222BF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58BACE831A36AE5A009222BF /* NotesViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		58BACE861A36BE7D009222BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				580BDB491A5A31FF00BF6807 /* NoteTableViewCell.swift */,
+				580BDB4A1A5A31FF00BF6807 /* NoteTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		58D7BF911A3697B700F15DF4 = {
 			isa = PBXGroup;
 			children = (
@@ -166,10 +197,11 @@
 			isa = PBXGroup;
 			children = (
 				58D7BF9F1A3697B700F15DF4 /* AppDelegate.swift */,
-				58D7BFA11A3697B700F15DF4 /* ViewController.swift */,
 				58D7BFA31A3697B700F15DF4 /* Main.storyboard */,
-				58D7BFA61A3697B700F15DF4 /* Images.xcassets */,
 				58D7BFA81A3697B700F15DF4 /* LaunchScreen.xib */,
+				58BACE851A36BE4E009222BF /* View Controllers */,
+				58BACE861A36BE7D009222BF /* Views */,
+				58D7BFA61A3697B700F15DF4 /* Images.xcassets */,
 				58D7BF9D1A3697B700F15DF4 /* Supporting Files */,
 			);
 			path = NoteifyMe;
@@ -288,6 +320,7 @@
 				58D7BF971A3697B700F15DF4 /* Frameworks */,
 				58D7BF981A3697B700F15DF4 /* Resources */,
 				58D7BFF61A3698B000F15DF4 /* Embed App Extensions */,
+				580BDB761A5A3F4A00BF6807 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -425,6 +458,7 @@
 				58D7BFA51A3697B700F15DF4 /* Main.storyboard in Resources */,
 				58D7BFAA1A3697B700F15DF4 /* LaunchScreen.xib in Resources */,
 				58D7BFA71A3697B700F15DF4 /* Images.xcassets in Resources */,
+				580BDB4C1A5A31FF00BF6807 /* NoteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,8 +502,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58D7BFA21A3697B700F15DF4 /* ViewController.swift in Sources */,
 				58D7BFA01A3697B700F15DF4 /* AppDelegate.swift in Sources */,
+				58BACE841A36AE5A009222BF /* NotesViewController.swift in Sources */,
+				580BDB4B1A5A31FF00BF6807 /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +813,7 @@
 				58D7BFBB1A3697B700F15DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58D7BFBC1A3697B700F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMeTests" */ = {
 			isa = XCConfigurationList;
@@ -786,6 +822,7 @@
 				58D7BFBE1A3697B700F15DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58D7BFF01A3698B000F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMe Watch App" */ = {
 			isa = XCConfigurationList;
@@ -794,6 +831,7 @@
 				58D7BFF21A3698B000F15DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58D7BFF31A3698B000F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMe WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -802,6 +840,7 @@
 				58D7BFF51A3698B000F15DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58D7C0091A369E3700F15DF4 /* Build configuration list for PBXNativeTarget "NoteifyMeToday" */ = {
 			isa = XCConfigurationList;
@@ -810,6 +849,7 @@
 				58D7C00B1A369E3700F15DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

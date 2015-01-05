@@ -34,6 +34,20 @@
                ReferencedContainer = "container:NoteifyMe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "580BDB631A5A3F4A00BF6807"
+               BuildableName = "NoteifyMeFrameworkTests.xctest"
+               BlueprintName = "NoteifyMeFrameworkTests"
+               ReferencedContainer = "container:NoteifyMe.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "58D7BFAE1A3697B700F15DF4"
                BuildableName = "NoteifyMeTests.xctest"
                BlueprintName = "NoteifyMeTests"
+               ReferencedContainer = "container:NoteifyMe.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "580BDB631A5A3F4A00BF6807"
+               BuildableName = "NoteifyMeFrameworkTests.xctest"
+               BlueprintName = "NoteifyMeFrameworkTests"
                ReferencedContainer = "container:NoteifyMe.xcodeproj">
             </BuildableReference>
          </TestableReference>

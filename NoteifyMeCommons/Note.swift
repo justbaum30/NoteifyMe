@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objc(NMNote)
 public class Note: NSObject, NSCoding, NSCopying {
     
     // MARK: Types
@@ -16,6 +17,7 @@ public class Note: NSObject, NSCoding, NSCopying {
         static let title = "title"
         static let content = "content"
         static let color = "color"
+        static let uuid = "uuid"
     }
     
     public enum Color: Int, Printable {
@@ -49,14 +51,15 @@ public class Note: NSObject, NSCoding, NSCopying {
     public var title: String
     public var content: String
     public var color: Color
-    
+    public var uuid: String
     
     // MARK: Initializers
     
-    public init(title: String = "", content: String = "", color: Color = .Gray) {
+    public init(title: String = "", content: String = "", color: Color = .Gray, uuid: String = NSUUID().UUIDString) {
         self.title = title
         self.content = content
         self.color = color
+        self.uuid = uuid
     }
     
     // MARK: NSCoding
@@ -65,18 +68,20 @@ public class Note: NSObject, NSCoding, NSCopying {
         title = aDecoder.decodeObjectForKey(SerializationKeys.title) as String
         content = aDecoder.decodeObjectForKey(SerializationKeys.content) as String
         color = Color(rawValue: aDecoder.decodeIntegerForKey(SerializationKeys.color))!
+        uuid = aDecoder.decodeObjectForKey(SerializationKeys.uuid) as String
     }
     
     public func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(title, forKey: SerializationKeys.title)
         aCoder.encodeObject(content, forKey: SerializationKeys.content)
         aCoder.encodeInteger(color.rawValue, forKey: SerializationKeys.color)
+        aCoder.encodeObject(uuid, forKey: SerializationKeys.uuid)
     }
     
     // MARK: NSCopying
     
     public func copyWithZone(zone: NSZone) -> AnyObject  {
-        return Note(title: title, content: content, color: color)
+        return Note(title: title, content: content, color: color, uuid: uuid)
     }
     
 }

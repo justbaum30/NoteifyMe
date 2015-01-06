@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NoteifyMeCommons
 
 class NotesViewController : UITableViewController {
     
@@ -16,12 +17,18 @@ class NotesViewController : UITableViewController {
         static let editNoteControllerId = "EditNoteViewController"
     }
     
+    private var notes: [Note] = []
+    
     // MARK: View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.registerNib(NoteTableViewCell.nibForClass(), forCellReuseIdentifier: Constants.noteCellId)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        notes = NoteBusinessService.getNotes()
     }
     
     // MARK: UITableViewDelegate
@@ -31,11 +38,13 @@ class NotesViewController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return notes.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.noteCellId) as NoteTableViewCell
+        cell.styleCellWithNote(notes[indexPath.row])
+        return cell
     }
     
     // MARK: Actions

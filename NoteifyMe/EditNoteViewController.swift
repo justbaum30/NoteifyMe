@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NoteifyMeCommons
 
 class EditNoteViewController: UIViewController {
 
@@ -21,7 +22,9 @@ class EditNoteViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func saveNote(sender: AnyObject) {
-        
+        let note = Note(title: titleTextField.text, content: contentTextView.text)
+        NoteBusinessService.addNote(note)
+        navigationController?.popViewControllerAnimated(true)
     }
     
     @IBAction func cancel(sender: AnyObject) {

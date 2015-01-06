@@ -32,7 +32,7 @@ class NoteTableViewCell: UITableViewCell {
     // MARK: Class functions
     
     class func nibForClass() -> UINib {
-        return UINib(nibName: NSStringFromClass(self), bundle: nil)
+        return UINib(nibName: "NoteTableViewCell", bundle: nil)
     }
     
 }

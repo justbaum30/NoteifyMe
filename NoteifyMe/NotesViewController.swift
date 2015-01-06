@@ -12,6 +12,8 @@ class NotesViewController : UITableViewController {
     
     private struct Constants {
         static let noteCellId = "NoteCell"
+        static let storyboardId = "Main"
+        static let editNoteControllerId = "EditNoteViewController"
     }
     
     // MARK: View lifecycle
@@ -19,6 +21,29 @@ class NotesViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.registerNib(NoteTableViewCell.nibForClass(), forCellReuseIdentifier: Constants.noteCellId)
+    }
+    
+    // MARK: UITableViewDelegate
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    // MARK: Actions
+    
+    @IBAction func addNote(barButtonItem: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: Constants.storyboardId, bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier(Constants.editNoteControllerId) as UIViewController
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }

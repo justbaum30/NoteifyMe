@@ -34,6 +34,9 @@
 		58D7C0031A369E3700F15DF4 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7C0021A369E3700F15DF4 /* TodayViewController.swift */; };
 		58D7C0051A369E3700F15DF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D7C0041A369E3700F15DF4 /* MainInterface.storyboard */; };
 		58D7C0081A369E3700F15DF4 /* NoteifyMeToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 58D7BFFC1A369E3700F15DF4 /* NoteifyMeToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		58E34C091A5B847200B4B271 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E34C081A5B847200B4B271 /* EditNoteViewController.swift */; };
+		58E34C0B1A5B853A00B4B271 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E34C0A1A5B853A00B4B271 /* QuartzCore.framework */; };
+		58E34C151A5B93B600B4B271 /* NoteBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E34C141A5B93B600B4B271 /* NoteBusinessService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +154,9 @@
 		58D7C0011A369E3700F15DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58D7C0021A369E3700F15DF4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		58D7C0041A369E3700F15DF4 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		58E34C081A5B847200B4B271 /* EditNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
+		58E34C0A1A5B853A00B4B271 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		58E34C141A5B93B600B4B271 /* NoteBusinessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteBusinessService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E34C0B1A5B853A00B4B271 /* QuartzCore.framework in Frameworks */,
 				580BDB961A5A42DA00BF6807 /* NoteifyMeCommons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +210,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		580BDB801A5A42DA00BF6807 /* NoteifyMeCommons */ = {
+		580BDB801A5A42DA00BF6807 /* NoteifyMe Commons */ = {
 			isa = PBXGroup;
 			children = (
 				580BDB9F1A5A444D00BF6807 /* Business Service */,
@@ -212,6 +219,7 @@
 				580BDB811A5A42DA00BF6807 /* Supporting Files */,
 				580BDB8F1A5A42DA00BF6807 /* Tests */,
 			);
+			name = "NoteifyMe Commons";
 			path = NoteifyMeCommons;
 			sourceTree = "<group>";
 		};
@@ -252,6 +260,7 @@
 		580BDB9F1A5A444D00BF6807 /* Business Service */ = {
 			isa = PBXGroup;
 			children = (
+				58E34C141A5B93B600B4B271 /* NoteBusinessService.swift */,
 			);
 			name = "Business Service";
 			sourceTree = "<group>";
@@ -259,6 +268,7 @@
 		58BACE851A36BE4E009222BF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				58E34C081A5B847200B4B271 /* EditNoteViewController.swift */,
 				58BACE831A36AE5A009222BF /* NotesViewController.swift */,
 			);
 			name = "View Controllers";
@@ -279,7 +289,7 @@
 				58D7BF9C1A3697B700F15DF4 /* NoteifyMe */,
 				58D7BFF71A369C9600F15DF4 /* NoteifyMe Watch App */,
 				58D7BFFF1A369E3700F15DF4 /* NoteifyMeToday */,
-				580BDB801A5A42DA00BF6807 /* NoteifyMeCommons */,
+				580BDB801A5A42DA00BF6807 /* NoteifyMe Commons */,
 				58D7BFD11A3698B000F15DF4 /* Frameworks */,
 				58D7BF9B1A3697B700F15DF4 /* Products */,
 			);
@@ -343,6 +353,7 @@
 		58D7BFD11A3698B000F15DF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58E34C0A1A5B853A00B4B271 /* QuartzCore.framework */,
 				58D7BFD21A3698B000F15DF4 /* WatchKit.framework */,
 				58D7BFFD1A369E3700F15DF4 /* NotificationCenter.framework */,
 			);
@@ -683,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				580BDBA11A5A447200BF6807 /* Note.swift in Sources */,
+				58E34C151A5B93B600B4B271 /* NoteBusinessService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +712,7 @@
 			files = (
 				58D7BFA01A3697B700F15DF4 /* AppDelegate.swift in Sources */,
 				58BACE841A36AE5A009222BF /* NotesViewController.swift in Sources */,
+				58E34C091A5B847200B4B271 /* EditNoteViewController.swift in Sources */,
 				580BDB4B1A5A31FF00BF6807 /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1094,6 +1107,7 @@
 				580BDB9A1A5A42DA00BF6807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		580BDB9B1A5A42DA00BF6807 /* Build configuration list for PBXNativeTarget "NoteifyMeCommonsTests" */ = {
 			isa = XCConfigurationList;
@@ -1102,6 +1116,7 @@
 				580BDB9D1A5A42DA00BF6807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58D7BF951A3697B700F15DF4 /* Build configuration list for PBXProject "NoteifyMe" */ = {
 			isa = XCConfigurationList;

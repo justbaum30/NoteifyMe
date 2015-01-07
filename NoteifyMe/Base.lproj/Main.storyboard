@@ -109,7 +109,9 @@
                             <constraint firstAttribute="width" secondItem="N7j-Rf-4FO" secondAttribute="width" constant="30" id="wmK-uS-tXR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="NoteifyMe" id="Lae-OR-HOj"/>
+                    <navigationItem key="navigationItem" title="NoteifyMe" id="Lae-OR-HOj">
+                        <barButtonItem key="backBarButtonItem" title=" " id="0dl-rc-Hc4"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentTextView" destination="o4E-Xz-COD" id="z4g-nA-HVi"/>
                         <outlet property="datePicker" destination="5mV-M7-S8m" id="kfY-Bf-FpL"/>
@@ -134,6 +136,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="NoteifyMe" id="8oY-ML-3Dt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="3YY-Yf-gfj"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jxn-ub-Hnp">
                             <connections>
                                 <action selector="addNote:" destination="pJh-TK-vcN" id="3Pe-qJ-Lx6"/>

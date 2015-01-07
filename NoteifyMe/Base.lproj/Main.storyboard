@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="1002" y="308"/>
         </scene>
-        <!--Edit Note View Controller-->
+        <!--NoteifyMe-->
         <scene sceneID="g4g-g9-rBd">
             <objects>
                 <viewController storyboardIdentifier="EditNoteViewController" id="TwS-e3-ylZ" customClass="EditNoteViewController" customModule="NoteifyMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,9 +109,10 @@
                             <constraint firstAttribute="width" secondItem="N7j-Rf-4FO" secondAttribute="width" constant="30" id="wmK-uS-tXR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Lae-OR-HOj"/>
+                    <navigationItem key="navigationItem" title="NoteifyMe" id="Lae-OR-HOj"/>
                     <connections>
                         <outlet property="contentTextView" destination="o4E-Xz-COD" id="z4g-nA-HVi"/>
+                        <outlet property="datePicker" destination="5mV-M7-S8m" id="kfY-Bf-FpL"/>
                         <outlet property="titleTextField" destination="N7j-Rf-4FO" id="qOz-SG-bgW"/>
                     </connections>
                 </viewController>
@@ -119,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="1726" y="1018"/>
         </scene>
-        <!--Notes View Controller-->
+        <!--NoteifyMe-->
         <scene sceneID="Q5o-eY-7I2">
             <objects>
                 <tableViewController id="pJh-TK-vcN" customClass="NotesViewController" customModule="NoteifyMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -132,7 +133,7 @@
                             <outlet property="delegate" destination="pJh-TK-vcN" id="BLL-sK-ghJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8oY-ML-3Dt">
+                    <navigationItem key="navigationItem" title="NoteifyMe" id="8oY-ML-3Dt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jxn-ub-Hnp">
                             <connections>
                                 <action selector="addNote:" destination="pJh-TK-vcN" id="3Pe-qJ-Lx6"/>

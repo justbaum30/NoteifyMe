@@ -23,7 +23,9 @@ class NotesViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.registerNib(NoteTableViewCell.nibForClass(), forCellReuseIdentifier: Constants.noteCellId)
+        tableView.estimatedRowHeight = 75.0
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -47,11 +49,22 @@ class NotesViewController : UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        pushToEditNotesController(notes[indexPath.row])
+    }
+    
     // MARK: Actions
     
     @IBAction func addNote(barButtonItem: UIBarButtonItem) {
+        pushToEditNotesController(nil)
+    }
+    
+    // MARK: Private helper methods
+    
+    func pushToEditNotesController(note: Note?) {
         let storyboard = UIStoryboard(name: Constants.storyboardId, bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier(Constants.editNoteControllerId) as UIViewController
+        let controller = storyboard.instantiateViewControllerWithIdentifier(Constants.editNoteControllerId) as EditNoteViewController
+        controller.editingNote = note
         navigationController?.pushViewController(controller, animated: true)
     }
     

@@ -25,8 +25,13 @@ class NoteTableViewCell: UITableViewCell {
     }
     
     func styleCellWithNote(note: Note) {
-        self.titleLabel.text = note.title
-        self.colorIndicator.backgroundColor = note.color.colorRef
+        titleLabel.text = note.title
+        colorIndicator.backgroundColor = note.color.colorRef
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        dateLabel.text = dateFormatter.stringFromDate(note.date)
     }
     
     // MARK: Class functions

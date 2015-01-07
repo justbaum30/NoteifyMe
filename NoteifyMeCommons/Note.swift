@@ -16,6 +16,7 @@ public class Note: NSObject, NSCoding, NSCopying {
     private struct SerializationKeys {
         static let title = "title"
         static let content = "content"
+        static let date = "date"
         static let color = "color"
         static let uuid = "uuid"
     }
@@ -50,14 +51,16 @@ public class Note: NSObject, NSCoding, NSCopying {
     
     public var title: String
     public var content: String
+    public var date: NSDate
     public var color: Color
     public var uuid: String
     
     // MARK: Initializers
     
-    public init(title: String = "", content: String = "", color: Color = .Gray, uuid: String = NSUUID().UUIDString) {
+    public init(title: String, content: String, date: NSDate, color: Color = .Gray, uuid: String = NSUUID().UUIDString) {
         self.title = title
         self.content = content
+        self.date = date
         self.color = color
         self.uuid = uuid
     }
@@ -67,6 +70,7 @@ public class Note: NSObject, NSCoding, NSCopying {
     public required init(coder aDecoder: NSCoder) {
         title = aDecoder.decodeObjectForKey(SerializationKeys.title) as String
         content = aDecoder.decodeObjectForKey(SerializationKeys.content) as String
+        date = aDecoder.decodeObjectForKey(SerializationKeys.date) as NSDate
         color = Color(rawValue: aDecoder.decodeIntegerForKey(SerializationKeys.color))!
         uuid = aDecoder.decodeObjectForKey(SerializationKeys.uuid) as String
     }
@@ -74,6 +78,7 @@ public class Note: NSObject, NSCoding, NSCopying {
     public func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(title, forKey: SerializationKeys.title)
         aCoder.encodeObject(content, forKey: SerializationKeys.content)
+        aCoder.encodeObject(date, forKey: SerializationKeys.date)
         aCoder.encodeInteger(color.rawValue, forKey: SerializationKeys.color)
         aCoder.encodeObject(uuid, forKey: SerializationKeys.uuid)
     }
@@ -81,7 +86,7 @@ public class Note: NSObject, NSCoding, NSCopying {
     // MARK: NSCopying
     
     public func copyWithZone(zone: NSZone) -> AnyObject  {
-        return Note(title: title, content: content, color: color, uuid: uuid)
+        return Note(title: title, content: content, date: date, color: color, uuid: uuid)
     }
     
 }

@@ -112,17 +112,35 @@
                 <controller identifier="WatchPlayground1" id="pNv-Ka-fhy">
                     <items>
                         <switch width="1" alignment="left" value="YES" title="Switch" id="26J-dK-9yS"/>
-                        <button width="1" alignment="left" title="Button" id="cJ9-DJ-NFS"/>
-                        <slider width="1" alignment="left" value="0.5" steps="2" id="jxk-ZD-2ZV"/>
+                        <slider width="1" alignment="left" value="3" maximum="5" steps="5" id="jxk-ZD-2ZV"/>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="435" y="418"/>
         </scene>
         <!--WatchPlayground2-->
+        <scene sceneID="kxR-fo-83I">
+            <objects>
+                <controller identifier="WatchPlayground2" id="5NC-47-oZ1">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="FF1-IE-F8Y"/>
+                        <button alignment="left" id="QEB-nj-gOK">
+                            <group key="contentGroup" width="1" alignment="left" id="EUk-mI-2rd">
+                                <items>
+                                    <imageView alignment="left" image="watchkit_logo" id="Deo-PB-y2h"/>
+                                    <label alignment="left" verticalAlignment="center" text="Test" id="12C-L8-B3K"/>
+                                </items>
+                            </group>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="610" y="418"/>
+        </scene>
+        <!--WatchPlayground3-->
         <scene sceneID="5Wa-VU-FUk">
             <objects>
-                <controller identifier="WatchPlayground2" id="UX4-M3-pIN">
+                <controller identifier="WatchPlayground3" id="UX4-M3-pIN">
                     <items>
                         <dateLabel alignment="left" id="92s-qH-BeV">
                             <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
@@ -132,18 +150,18 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="616" y="418"/>
+            <point key="canvasLocation" x="787" y="418"/>
         </scene>
-        <!--WatchPlayground3-->
+        <!--WatchPlayground4-->
         <scene sceneID="MdC-gy-Yp0">
             <objects>
-                <controller identifier="WatchPlayground3" id="Nek-ek-7F5">
+                <controller identifier="WatchPlayground4" id="Nek-ek-7F5">
                     <items>
                         <map alignment="left" id="8SM-zw-V8I"/>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="800" y="418"/>
+            <point key="canvasLocation" x="976" y="418"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

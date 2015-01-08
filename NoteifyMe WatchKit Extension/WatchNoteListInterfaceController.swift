@@ -29,7 +29,7 @@ class WatchNoteListInterfaceController: WKInterfaceController {
     
     // MARK: Properties
     
-    private let playgroundIds = ["WatchPlayground1", "WatchPlayground2", "WatchPlayground3"]
+    private let playgroundIds = ["WatchPlayground1", "WatchPlayground2", "WatchPlayground3", "WatchPlayground4"]
     
     @IBOutlet weak var interfaceTable: WKInterfaceTable!
 

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
     </dependencies>
     <scenes>
-        <!--Watch Note List Interface Controller-->
+        <!--Notes-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="WatchNoteListInterfaceController" customModule="NoteifyMe_WatchKit_Extension">
+                <controller title="Notes" id="AgC-eL-Hgc" customClass="WatchNoteListInterfaceController" customModule="NoteifyMe_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="DIC-fz-aEz">
                             <items>
@@ -41,17 +41,36 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="63s-NT-mdn">
+                        <items>
+                            <menuItem title="Refresh" icon="repeat" id="qAr-B0-BJ0">
+                                <connections>
+                                    <action selector="refreshTable" destination="AgC-eL-Hgc" id="UdR-Zd-NT9"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Playground" icon="more" id="IhN-Dr-4cW">
+                                <connections>
+                                    <action selector="goToPlayground" destination="AgC-eL-Hgc" id="Ezo-Gy-Hyf"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Remove All" icon="trash" id="7KM-9A-R78">
+                                <connections>
+                                    <action selector="removeAllNotes" destination="AgC-eL-Hgc" id="bVc-Fp-4nI"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="interfaceTable" destination="DIC-fz-aEz" id="tKX-Zm-f0G"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="235" y="185"/>
         </scene>
-        <!--Watch Note Details Interface Controller-->
+        <!--View Note-->
         <scene sceneID="vzc-xr-JpQ">
             <objects>
-                <controller id="f5Z-Gh-tn3" customClass="WatchNoteDetailsInterfaceController" customModule="NoteifyMe_WatchKit_Extension">
+                <controller title="View Note" id="f5Z-Gh-tn3" customClass="WatchNoteDetailsInterfaceController" customModule="NoteifyMe_WatchKit_Extension">
                     <items>
                         <group width="0.90000000000000002" height="6" alignment="center" radius="0.0" id="aeV-Uf-g1I">
                             <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,16 +78,24 @@
                         <label alignment="left" text="Label" id="V3x-9a-Qxb">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <timer alignment="center" format="abbreviated" id="quh-ZJ-njJ">
+                        <timer alignment="center" numberOfLines="0" enabled="YES" format="short" id="quh-ZJ-njJ">
                             <color key="textColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
-                            <calendarUnit key="units" day="YES" hour="YES" minute="YES" second="YES"/>
                         </timer>
                         <separator alignment="left" id="7Yd-aO-f1b">
                             <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </separator>
                         <label alignment="left" text="Label" numberOfLines="0" id="HjJ-Sc-3XL"/>
                     </items>
+                    <menu key="menu" id="8IZ-c3-qUD">
+                        <items>
+                            <menuItem title="Remove Note" icon="trash" id="wVO-DQ-WDU">
+                                <connections>
+                                    <action selector="removeNote" destination="f5Z-Gh-tn3" id="mJ9-u5-PFh"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="colorIndicator" destination="aeV-Uf-g1I" id="OVh-Wv-37s"/>
                         <outlet property="contentLabel" destination="HjJ-Sc-3XL" id="kec-zw-I2B"/>
@@ -77,7 +104,46 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="436" y="347"/>
+            <point key="canvasLocation" x="436" y="185"/>
+        </scene>
+        <!--WatchPlayground1-->
+        <scene sceneID="b9H-3W-Vwq">
+            <objects>
+                <controller identifier="WatchPlayground1" id="pNv-Ka-fhy">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="26J-dK-9yS"/>
+                        <button width="1" alignment="left" title="Button" id="cJ9-DJ-NFS"/>
+                        <slider width="1" alignment="left" value="0.5" steps="2" id="jxk-ZD-2ZV"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="435" y="418"/>
+        </scene>
+        <!--WatchPlayground2-->
+        <scene sceneID="5Wa-VU-FUk">
+            <objects>
+                <controller identifier="WatchPlayground2" id="UX4-M3-pIN">
+                    <items>
+                        <dateLabel alignment="left" id="92s-qH-BeV">
+                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                        </dateLabel>
+                        <timer alignment="left" numberOfLines="0" enabled="YES" format="short" id="obK-ew-jrg"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="616" y="418"/>
+        </scene>
+        <!--WatchPlayground3-->
+        <scene sceneID="MdC-gy-Yp0">
+            <objects>
+                <controller identifier="WatchPlayground3" id="Nek-ek-7F5">
+                    <items>
+                        <map alignment="left" id="8SM-zw-V8I"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="800" y="418"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

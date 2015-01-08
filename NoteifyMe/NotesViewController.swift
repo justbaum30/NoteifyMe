@@ -26,12 +26,12 @@ class NotesViewController : UITableViewController {
         
         tableView.registerNib(NoteTableViewCell.nibForClass(), forCellReuseIdentifier: Constants.noteCellId)
         tableView.estimatedRowHeight = 75.0
+        setupRefresh()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        notes = NoteBusinessService.getNotes()
-        tableView.reloadData()
+        reloadData()
     }
     
     // MARK: UITableViewDelegate
@@ -54,6 +54,18 @@ class NotesViewController : UITableViewController {
         pushToEditNotesController(notes[indexPath.row])
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            NoteBusinessService.deleteNote(notes[indexPath.row].uuid)
+            notes.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths(NSArray(object: indexPath), withRowAnimation: .Automatic)
+        }
+    }
+    
     // MARK: Actions
     
     @IBAction func addNote(barButtonItem: UIBarButtonItem) {
@@ -62,11 +74,22 @@ class NotesViewController : UITableViewController {
     
     // MARK: Private helper methods
     
-    func pushToEditNotesController(note: Note?) {
+    private func pushToEditNotesController(note: Note?) {
         let storyboard = UIStoryboard(name: Constants.storyboardId, bundle: nil)
         let controller = storyboard.instantiateViewControllerWithIdentifier(Constants.editNoteControllerId) as EditNoteViewController
         controller.editingNote = note
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    private func setupRefresh() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: "reloadData", forControlEvents: .ValueChanged)
+    }
+    
+    func reloadData() {
+        notes = NoteBusinessService.getNotes()
+        tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
     
 }

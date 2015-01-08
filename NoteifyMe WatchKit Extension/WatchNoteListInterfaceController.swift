@@ -29,13 +29,13 @@ class WatchNoteListInterfaceController: WKInterfaceController {
     
     // MARK: Properties
     
+    private let playgroundIds = ["WatchPlayground1", "WatchPlayground2", "WatchPlayground3"]
+    
     @IBOutlet weak var interfaceTable: WKInterfaceTable!
 
     override func willActivate() {
         super.willActivate()
         configureTable()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDefaultsDidChange:", name: NSUserDefaultsDidChangeNotification, object: nil)
     }
     
     override func didDeactivate() {
@@ -43,9 +43,18 @@ class WatchNoteListInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    // MARK: NSNotification selectors
+    // MARK: Actions
     
-    func userDefaultsDidChange(notification: NSNotification) {
+    @IBAction func refreshTable() {
+        configureTable()
+    }
+    
+    @IBAction func goToPlayground() {
+        presentControllerWithNames(playgroundIds, contexts: nil)
+    }
+    
+    @IBAction func removeAllNotes() {
+        NoteBusinessService.deleteNotes()
         configureTable()
     }
     

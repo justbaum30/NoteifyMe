@@ -64,9 +64,13 @@ public class NoteBusinessService: NSObject {
         let noteToDeleteOpt = getNote(uuid)
         
         if let noteToDelete = noteToDeleteOpt {
-            let index = find(notes, noteToDelete)
-            notes.removeAtIndex(index!)
-            saveNotes(notes)
+            for var index = 0; index < notes.count; ++index {
+                if notes[index].uuid == uuid {
+                    notes.removeAtIndex(index)
+                    saveNotes(notes)
+                    return
+                }
+            }
         }
     }
     

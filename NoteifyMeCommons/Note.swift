@@ -22,7 +22,7 @@ public class Note: NSObject, NSCoding, NSCopying {
     }
     
     public enum Color: Int, Printable {
-        case Gray, Blue, Green, Yellow, Orange, Red
+        case Gray, Blue, Green, Orange, Yellow, Red
         
         public var colorRef: UIColor {
             switch self {

@@ -21,6 +21,10 @@ class WatchNoteListInterfaceController: WKInterfaceController {
             static let note = "NoteListRowControllerId"
             static let noNotes = "NoNoteListRowControllerId"
         }
+        
+        struct Segues {
+            static let noteSelection = "WatchNoteDetailsControllerSegue"
+        }
     }
     
     // MARK: Properties
@@ -30,6 +34,13 @@ class WatchNoteListInterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         configureTable()
+    }
+    
+    // MARK: Segues
+    
+    override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
+        let notes = NoteBusinessService.getNotes()
+        return notes[rowIndex]
     }
     
     // MARK: Private helper methods

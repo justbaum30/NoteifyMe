@@ -16,6 +16,7 @@
 		580BDB971A5A42DA00BF6807 /* NoteifyMeCommons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 580BDB7F1A5A42DA00BF6807 /* NoteifyMeCommons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		580BDBA11A5A447200BF6807 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580BDBA01A5A447200BF6807 /* Note.swift */; };
 		581984051A5CF3090056DED7 /* NoteListRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581984041A5CF3090056DED7 /* NoteListRowController.swift */; };
+		581984071A5D04200056DED7 /* WatchNoteDetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581984061A5D04200056DED7 /* WatchNoteDetailsInterfaceController.swift */; };
 		58BACE841A36AE5A009222BF /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BACE831A36AE5A009222BF /* NotesViewController.swift */; };
 		58D7BFA01A3697B700F15DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7BF9F1A3697B700F15DF4 /* AppDelegate.swift */; };
 		58D7BFA51A3697B700F15DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D7BFA31A3697B700F15DF4 /* Main.storyboard */; };
@@ -129,6 +130,7 @@
 		580BDB921A5A42DA00BF6807 /* NoteifyMeCommonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteifyMeCommonsTests.swift; sourceTree = "<group>"; };
 		580BDBA01A5A447200BF6807 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		581984041A5CF3090056DED7 /* NoteListRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListRowController.swift; sourceTree = "<group>"; };
+		581984061A5D04200056DED7 /* WatchNoteDetailsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchNoteDetailsInterfaceController.swift; sourceTree = "<group>"; };
 		58BACE831A36AE5A009222BF /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		58D7BF9A1A3697B700F15DF4 /* NoteifyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteifyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D7BF9E1A3697B700F15DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				58D7BFD81A3698B000F15DF4 /* WatchNoteListInterfaceController.swift */,
+				581984061A5D04200056DED7 /* WatchNoteDetailsInterfaceController.swift */,
 				581984031A5CF2750056DED7 /* Row Controllers */,
 			);
 			name = Main;
@@ -784,6 +787,7 @@
 				581984051A5CF3090056DED7 /* NoteListRowController.swift in Sources */,
 				58D7BFDB1A3698B000F15DF4 /* NotificationController.swift in Sources */,
 				58D7BFD91A3698B000F15DF4 /* WatchNoteListInterfaceController.swift in Sources */,
+				581984071A5D04200056DED7 /* WatchNoteDetailsInterfaceController.swift in Sources */,
 				58D7BFDD1A3698B000F15DF4 /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

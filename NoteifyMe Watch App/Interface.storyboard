@@ -15,21 +15,26 @@
                                 <tableRow identifier="NoteListRowControllerId" id="fnq-v0-FbT" customClass="NoteListRowController" customModule="NoteifyMe_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="BiO-Cu-OIA">
                                         <items>
-                                            <group width="5" height="25" alignment="left" verticalAlignment="center" id="rtg-yE-Nk1">
+                                            <group width="5" height="25" alignment="left" verticalAlignment="center" radius="0.0" id="rtg-yE-Nk1">
                                                 <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </group>
-                                            <label alignment="left" verticalAlignment="center" text="Label" id="jFj-Ml-Jg5"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="jFj-Ml-Jg5">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
                                         </items>
                                     </group>
                                     <connections>
                                         <outlet property="colorIndicator" destination="rtg-yE-Nk1" id="1fr-xK-xOx"/>
                                         <outlet property="titleLabel" destination="jFj-Ml-Jg5" id="qL2-oP-DZW"/>
+                                        <segue destination="f5Z-Gh-tn3" kind="push" id="Uvh-Dn-FCU"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="NoNoteListRowControllerId" id="Zmc-cX-mls" customClass="NoNoteListRowController" customModule="NoteifyMe_WatchKit_Extension">
+                                <tableRow identifier="NoNoteListRowControllerId" selectable="NO" id="Zmc-cX-mls" customClass="NoNoteListRowController" customModule="NoteifyMe_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="kLn-ee-Rbn">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" text="No Notes" id="cMU-V0-TBu"/>
+                                            <label alignment="left" verticalAlignment="center" text="No Notes" id="cMU-V0-TBu">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
                                         </items>
                                     </group>
                                 </tableRow>
@@ -42,6 +47,37 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Watch Note Details Interface Controller-->
+        <scene sceneID="vzc-xr-JpQ">
+            <objects>
+                <controller id="f5Z-Gh-tn3" customClass="WatchNoteDetailsInterfaceController" customModule="NoteifyMe_WatchKit_Extension">
+                    <items>
+                        <group width="0.90000000000000002" height="6" alignment="center" radius="0.0" id="aeV-Uf-g1I">
+                            <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <label alignment="left" text="Label" id="V3x-9a-Qxb">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <timer alignment="center" format="abbreviated" id="quh-ZJ-njJ">
+                            <color key="textColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                            <calendarUnit key="units" day="YES" hour="YES" minute="YES" second="YES"/>
+                        </timer>
+                        <separator alignment="left" id="7Yd-aO-f1b">
+                            <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <label alignment="left" text="Label" numberOfLines="0" id="HjJ-Sc-3XL"/>
+                    </items>
+                    <connections>
+                        <outlet property="colorIndicator" destination="aeV-Uf-g1I" id="OVh-Wv-37s"/>
+                        <outlet property="contentLabel" destination="HjJ-Sc-3XL" id="kec-zw-I2B"/>
+                        <outlet property="timeRemaining" destination="quh-ZJ-njJ" id="npS-I0-Ua1"/>
+                        <outlet property="titleLabel" destination="V3x-9a-Qxb" id="NWP-8d-Gfd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="436" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

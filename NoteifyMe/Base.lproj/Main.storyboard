@@ -73,26 +73,36 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="5mV-M7-S8m">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5mV-M7-S8m">
                                         <rect key="frame" x="15" y="269" width="570" height="162"/>
                                         <date key="date" timeIntervalSinceReferenceDate="442208345.221861">
                                             <!--2015-01-06 03:39:05 +0000-->
                                         </date>
                                     </datePicker>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUG-pi-RAx">
+                                        <rect key="frame" x="0.0" y="446" width="600" height="162"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="TwS-e3-ylZ" id="pFz-pR-B1w"/>
+                                            <outlet property="delegate" destination="TwS-e3-ylZ" id="wHo-mL-hv1"/>
+                                        </connections>
+                                    </pickerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="o4E-Xz-COD" firstAttribute="trailing" secondItem="5mV-M7-S8m" secondAttribute="trailing" id="11i-c2-JMf"/>
+                                    <constraint firstItem="VUG-pi-RAx" firstAttribute="leading" secondItem="5mV-M7-S8m" secondAttribute="leading" constant="-15" id="14x-3d-VNe"/>
                                     <constraint firstItem="N7j-Rf-4FO" firstAttribute="leading" secondItem="5Im-Bw-IQh" secondAttribute="leading" constant="15" id="ASX-nU-3Ch"/>
                                     <constraint firstAttribute="centerX" secondItem="sy8-T4-wEB" secondAttribute="centerX" id="Izz-or-A1l"/>
                                     <constraint firstItem="o4E-Xz-COD" firstAttribute="leading" secondItem="5mV-M7-S8m" secondAttribute="leading" id="WOb-Mw-RX8"/>
                                     <constraint firstAttribute="centerX" secondItem="N7j-Rf-4FO" secondAttribute="centerX" id="cQm-32-bfa"/>
-                                    <constraint firstAttribute="bottom" secondItem="5mV-M7-S8m" secondAttribute="bottom" constant="15" id="d2S-or-PLQ"/>
+                                    <constraint firstItem="VUG-pi-RAx" firstAttribute="trailing" secondItem="5mV-M7-S8m" secondAttribute="trailing" constant="15" id="cav-nb-sBh"/>
                                     <constraint firstItem="o4E-Xz-COD" firstAttribute="top" secondItem="N7j-Rf-4FO" secondAttribute="bottom" constant="15" id="fUG-un-NRZ"/>
                                     <constraint firstItem="sy8-T4-wEB" firstAttribute="top" secondItem="5Im-Bw-IQh" secondAttribute="top" constant="20" id="fi2-8k-n4y"/>
                                     <constraint firstItem="N7j-Rf-4FO" firstAttribute="top" secondItem="sy8-T4-wEB" secondAttribute="bottom" constant="15" id="gPP-fd-Vad"/>
                                     <constraint firstAttribute="centerX" secondItem="o4E-Xz-COD" secondAttribute="centerX" id="jWQ-xP-5Rm"/>
+                                    <constraint firstItem="VUG-pi-RAx" firstAttribute="top" secondItem="5mV-M7-S8m" secondAttribute="bottom" constant="15" id="o6b-QL-3J1"/>
                                     <constraint firstAttribute="trailing" secondItem="N7j-Rf-4FO" secondAttribute="trailing" constant="15" id="piO-qx-39J"/>
                                     <constraint firstItem="5mV-M7-S8m" firstAttribute="top" secondItem="o4E-Xz-COD" secondAttribute="bottom" constant="15" id="upm-Bo-ero"/>
+                                    <constraint firstAttribute="bottom" secondItem="VUG-pi-RAx" secondAttribute="bottom" constant="15" id="yhQ-Ki-cfy"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -112,7 +122,10 @@
                     <navigationItem key="navigationItem" title="NoteifyMe" id="Lae-OR-HOj">
                         <barButtonItem key="backBarButtonItem" title=" " id="0dl-rc-Hc4"/>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
+                        <outlet property="colorPicker" destination="VUG-pi-RAx" id="qHR-EI-g45"/>
                         <outlet property="contentTextView" destination="o4E-Xz-COD" id="z4g-nA-HVi"/>
                         <outlet property="datePicker" destination="5mV-M7-S8m" id="kfY-Bf-FpL"/>
                         <outlet property="titleTextField" destination="N7j-Rf-4FO" id="qOz-SG-bgW"/>

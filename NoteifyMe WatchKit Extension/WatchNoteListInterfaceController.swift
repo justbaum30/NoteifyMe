@@ -34,6 +34,19 @@ class WatchNoteListInterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         configureTable()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDefaultsDidChange:", name: NSUserDefaultsDidChangeNotification, object: nil)
+    }
+    
+    override func didDeactivate() {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+        super.didDeactivate()
+    }
+    
+    // MARK: NSNotification selectors
+    
+    func userDefaultsDidChange(notification: NSNotification) {
+        configureTable()
     }
     
     // MARK: Segues

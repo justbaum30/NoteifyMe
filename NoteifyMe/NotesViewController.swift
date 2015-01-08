@@ -31,6 +31,7 @@ class NotesViewController : UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         notes = NoteBusinessService.getNotes()
+        tableView.reloadData()
     }
     
     // MARK: UITableViewDelegate

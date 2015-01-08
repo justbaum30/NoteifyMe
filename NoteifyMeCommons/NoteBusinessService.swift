@@ -41,6 +41,18 @@ public class NoteBusinessService: NSObject {
         store.synchronize()
     }
     
+    public class func saveNote(note: Note) {
+        var notes = getNotes()
+        for var index = 0; index < notes.count; ++index {
+            let oldNote = notes[index]
+            if oldNote.uuid == note.uuid {
+                notes[index] = note
+                break
+            }
+        }
+        saveNotes(notes)
+    }
+    
     public class func addNote(note: Note) {
         var notes = getNotes()
         notes.append(note)

@@ -22,7 +22,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Note Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XX-tJ-OeD">
-                        <rect key="frame" x="21" y="15" width="117" height="24"/>
+                        <rect key="frame" x="21" y="15" width="348" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -36,6 +36,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="IEd-ky-0Fd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="67D-SW-OQO"/>
+                    <constraint firstAttribute="trailing" secondItem="4XX-tJ-OeD" secondAttribute="trailing" constant="8" id="TAS-jG-HKq"/>
                     <constraint firstItem="IEd-ky-0Fd" firstAttribute="top" secondItem="4XX-tJ-OeD" secondAttribute="top" constant="-5" id="Zkz-Oe-tTI"/>
                     <constraint firstItem="Mbp-mF-bDM" firstAttribute="top" secondItem="4XX-tJ-OeD" secondAttribute="bottom" constant="2" id="ath-Rp-Pvl"/>
                     <constraint firstItem="IEd-ky-0Fd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="l6x-Dp-utF"/>

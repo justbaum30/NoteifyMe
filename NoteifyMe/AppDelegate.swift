@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NoteifyMeCommons
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
+    }
+    
+    func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        
+        let alertController = UIAlertController(title: "Why Hello", message: "My watch told me to do this!", preferredStyle: .Alert)
+        let closeAction = UIAlertAction(title: "Close", style: .Default, handler: nil)
+        alertController.addAction(closeAction)
+        window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
     }
 
     func applicationWillResignActive(application: UIApplication) {

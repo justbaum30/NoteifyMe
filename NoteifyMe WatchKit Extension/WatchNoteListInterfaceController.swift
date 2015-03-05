@@ -58,6 +58,19 @@ class WatchNoteListInterfaceController: WKInterfaceController {
         configureTable()
     }
     
+    // MARK: Notification method
+    
+    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
+        
+        if identifier == "goToPlayground" {
+            goToPlayground()
+        } else if identifier == "showAlert" {
+            WKInterfaceController.openParentApplication(["" : ""], nil)
+        } else if identifier == "deleteAllNotes" {
+            removeAllNotes()
+        }
+    }
+    
     // MARK: Segues
     
     override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
@@ -80,5 +93,4 @@ class WatchNoteListInterfaceController: WKInterfaceController {
             }
         }
     }
-
 }
